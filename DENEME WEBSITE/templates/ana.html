@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uyarı Mesajı</title>
+    <style>
+        /* Stil için isteğe bağlı CSS kuralları */
+        .bildirim2 {
+            display: inline-block;
+            position: relative;
+        }
+
+        .uyari-mesaji {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="bildirim">
+    <a href="/acildurumbildirimi" class="image-link" id="bildirim-link">
+        <div class="bildirim2">
+            <img src="static/bildirim.png" alt="bildirim" />
+            <!-- Uyarı Mesajı -->
+            <div class="uyari-mesaji">Bu bir uyarı mesajıdır!</div>
+        </div>
+    </a>
+</div>
+
+<script>
+    // JavaScript kodu
+    document.getElementById('bildirim-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Sayfa yönlendirmesini engelle
+
+        // Uyarı mesajını göster
+        var uyariMesaji = document.querySelector('.uyari-mesaji');
+        uyariMesaji.style.display = 'block';
+
+        // Belirli bir süre sonra uyarı mesajını gizle (isteğe bağlı)
+        setTimeout(function() {
+            uyariMesaji.style.display = 'none';
+        }, 3000); // 3000 milisaniye (3 saniye) sonra gizle
+    });
+</script>
+
+</body>
+</html>

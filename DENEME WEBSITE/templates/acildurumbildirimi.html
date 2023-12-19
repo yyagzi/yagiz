@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greylag </title>
+    <link rel="stylesheet" href="static/acildurumbildirimicss.css">
+    <link href="https://fonts.cdnfonts.com/css/buffalo-3" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+
+
+</head>
+<body class="body">
+    <div class="container">
+        <div class="banner">
+            
+            <div class="ustkisim">
+                <img src="static/6.png" alt="ustkisim2"/>
+            </div>
+
+        <div class="bannertext">
+            <a href="/hakkimizda">
+                <button class="hakkimizda">
+                Hakkımızda
+                </button>
+            </a>
+            <a href="/hakkimizda">
+            <button class="iletisim">
+                İletişim
+            </button>
+            </a>
+            <a href="/haberler">
+            <button class="haberler">
+                Haberler
+            </button>
+            </a>
+            <button class="haberler2">
+                 
+            </button>
+        </div>
+
+
+
+
+        <div class="container2">    
+            <div class="uyari-mesaji" id="uyari-mesaji">Bu bir uyarı mesajıdır!</div>
+
+            <div class="bildirim">
+                <a href="#" class="image-link" id="bildirim-link">
+                    <div class="bildirim2">
+                        <img src="static/bildirim.png" alt="bildirim" />
+                    </div>
+                </a>
+            </div>
+        
+            <div class="toplanmayerleri">
+                <a href="/bolgedekitoplanmayerleri" class="image-link" id="toplanmayerleri-link">
+                    <div class="toplanmayerleri2">
+                        <img src="static/toplanmayerleri.png" alt="toplanmayerleri"/>
+                    </div>
+                </a>
+            </div>
+        
+        
+        </div>
+    </div>
+
+
+            <div class="guzelsoz">
+                <div class="guzelsoz2">
+                    <img src="static/4.png" alt="guzelsoz" height="105px"/>
+                    </div>
+
+            </div>
+            <script>
+                // JavaScript kodu
+                document.getElementById('bildirim-link').addEventListener('click', function(event) {
+                    event.preventDefault(); // Sayfa yönlendirmesini engelle
+            
+                    // Uyarı mesajını göster
+                    var uyariMesaji = document.getElementById('uyari-mesaji');
+                    uyariMesaji.style.display = 'block';
+            
+                    // Belirli bir süre sonra uyarı mesajını gizle (isteğe bağlı)
+                    setTimeout(function() {
+                        uyariMesaji.style.display = 'none';
+                    }, 3000); // 3000 milisaniye (3 saniye) sonra gizle
+                });
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+</html>

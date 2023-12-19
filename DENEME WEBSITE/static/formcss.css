@@ -1,0 +1,296 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: montserrat;
+
+
+}
+
+
+
+
+
+.body{
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+
+
+}
+
+.container{
+
+
+    background: rgb(155,191,250);
+    background: radial-gradient(circle, rgba(155,191,250,1) 35%, rgba(120,152,255,1) 100%);
+
+
+    width:1080px;
+    height:1450px;
+    margin-left:50px;
+    margin-top:40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;    
+    overflow: hidden;
+
+
+
+}
+
+
+.title{
+    font-size:50px ;
+    margin-top: 75px;
+    margin-left: 25px;
+
+}
+
+.title h2{
+    font-family: montserrat;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    
+}
+.title i{
+    position: absolute;
+    color:rgb(0, 0, 0);
+    margin-top:-20px;
+    margin-left: 95px;
+}
+
+.username{
+    
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom:30px;
+
+
+
+}
+
+.username h4{
+    color:rgb(0, 0, 0);
+    font-family: montserrat;
+    margin-top:30px;
+    margin-bottom: 5px;
+
+
+
+}
+.username input{
+    border-radius:41px ;
+    width:650px;
+    height:75px;
+    border:none;
+    font-size: 30px;
+
+    padding-left:5px !important ;
+}
+
+.username i{
+    color:black;
+
+    margin-top:15px !important;
+
+
+}
+
+.tc{
+    text-align: center;
+    margin-top:35px;
+
+    font-family: roboto;
+    color:rgb(0, 0, 0);
+    font-size: 30px;
+}
+.logo {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 0px 0px;
+}
+
+.tc input{
+
+
+    border:none;
+
+}
+
+
+.tc-number {
+    text-align: center;
+    margin-top: 15px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in-out; /* Süreyi 0.7 saniyeye çıkardık */
+}
+
+.tc-number.show {
+    max-height: 200px;
+    transition: 1,5 ease;
+}
+
+.tc-number input {
+    border-radius: 41px;
+    width: 650px;
+    height: 75px;
+    border: none;
+    font-size: 30px;
+    margin-top: 35px;
+    padding-left: 5px !important;
+    display: block; /* Ekledik: Blok element olarak göster */
+    margin: 0 auto; /* Ekledik: Ortaya hizala */
+}
+
+.tc-number h4 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 5px;
+}
+
+
+.phone-number{
+    margin-top:35px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+
+}
+
+.phone-number input{
+    border-radius:41px ;
+    width:650px;
+    height:75px;
+    border:none;
+    font-size: 30px;
+    
+
+    padding-left:5px !important ;
+
+}
+
+.phone-number h4{
+    margin-bottom: 5px;
+
+}
+
+.adres{
+    margin-top:35px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+}
+
+.adres input{
+    border-radius:51px ;
+    width:650px;
+    height:75px;
+    border:none;
+    font-size: 30px;
+
+    padding-left:5px !important ;
+
+}
+
+.adres h4{
+    margin-bottom: 5px;
+
+}
+
+
+.enkaz{
+    text-align: center;
+    margin-top:35px;
+    font-size: 30px;
+
+    font-family: roboto;
+    color:rgb(0, 0, 0);
+
+}
+
+
+
+.enkaz input{
+
+
+    border:none;
+    
+
+}
+
+
+h4{
+
+    font-size:37px;
+}
+
+.v{
+    margin-left:15px;
+    font-size: 30px;
+    
+}
+.v input[type="radio"] {
+    transform: scale(2); /* Yuvarlak kontrolü büyütmek için transform özelliği */
+    margin-right: 5px; /* İsteğe bağlı, kontrol ile metin arasına bir boşluk bırakmak için */
+}
+.b input[type="radio"] {
+    transform: scale(2); /* Yuvarlak kontrolü büyütmek için transform özelliği */
+    margin-right: 5px; /* İsteğe bağlı, kontrol ile metin arasına bir boşluk bırakmak için */
+}
+.b{
+    margin-top:15px;
+    weight: 100px;
+    font-size: 30px;
+}
+.a{
+
+    margin-top:15px;
+    font-size: 30px;
+}
+.a input[type="radio"] {
+    transform: scale(2); /* Yuvarlak kontrolü büyütmek için transform özelliği */
+    margin-right: 5px; /* İsteğe bağlı, kontrol ile metin arasına bir boşluk bırakmak için */
+}
+
+
+.buton{
+    margin-top:45px;
+
+
+
+}
+
+button{
+
+    font-family: montserrat;
+    font-size: 56px;
+    width:635px;
+    height:170px;
+    border:black;
+    border-radius:120px ;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    transition: all 0.5s ease-in-out;
+    margin-top: 50px;
+
+
+
+}
+button:hover {
+    transform: scale(1.1); /* 1.1 kat büyütme */
+    border-color: #2980b9;
+    color: #68a2ff;
+    font-weight: 600;
+}
+.buttonana{
+    text-align: center;
+}
+.image{
+    text-align: center;
+    margin-top:100px;
+    align-items: center;
+    justify-content: center;
+    
+}

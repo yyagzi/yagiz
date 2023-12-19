@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="static/icondene.jpg" type="image/jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greylag İHA Wifi Hayratı Kullanma Formu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="static\formcss.css">
+    <link rel="stylesheet" href="static\formtelefoncss.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body class="body">
+<div class="container">
+    <div class="container2">
+    <div class="title">
+        <i class='bx bx-wifi'></i>
+        <h2>Wifi Bağlantı Formu</h2>
+    </div>
+    
+
+
+
+
+
+        <div class="username">
+            <div class="usernameh4">
+                <h4>İsim - Soyisim</h4>
+            </div>
+            <input type="text" id="isimSoyisimInput" placeholder="  İsim-Soyisim">
+        </div>
+
+
+        <div class="tc">
+            <h4>T.C. Vatandaşı Mısınız?</h4>
+            <div class="a">
+                <label><input type="radio" name="vatandaslik" value="evet"> Evet</label>
+                <label class="v"><input type="radio" name="vatandaslik" value="hayir"> Hayır</label>
+            </div>
+        </div>
+
+        <div class="tc-number" id="tcKimlikNumarasiAlani" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out;">
+            <h4>T.C. No</h4>
+            <input type="password" id="tcNumaraInput" placeholder="  T.C. Kimlik Numarası (11 Haneli)">
+        </div>
+
+        <div class="phone-number">
+            <h4>Telefon Numarası</h4>
+            <input type="text" id="telefonNumaraInput" placeholder="  Telefon Numaranız (0'sız Giriniz)">
+        </div>
+
+        <div class="adres">
+            <h4>Adres</h4>
+            <input type="text" id="adresInput" placeholder="  Adresiniz">
+        </div>
+
+        <div class="enkaz">
+            <h4>Enkaz Altında Mısınız?</h4>
+            <div class="b">
+                <label><input type="radio" name="enkaz" value="evet"> Evet</label>
+                <label class="v"><input type="radio" name="enkaz" value="hayir"> Hayır</label>
+            </div>
+        </div>
+        <div class="buttonana">
+            <div class="buton">
+                <button type="button" onclick="kontrolleriYap()">Arayüze Bağlan</button>
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <img src="static/4.png" alt="guvendesiniz" width="900" height="100" />
+        </div>
+
+</div>
+<script>
+    
+    function kontrolleriYap() {
+        var isimSoyisimInput = document.getElementById("isimSoyisimInput");
+        var tcNumaraInput = document.getElementById("tcNumaraInput");
+        var telefonNumaraInput = document.getElementById("telefonNumaraInput");
+        var adresInput = document.getElementById("adresInput");
+
+        // Kontrolleri burada yapabilirsiniz
+        if (isimSoyisimInput.value.length > 5 &&
+            tcNumaraInput.value.length === 11 &&
+            telefonNumaraInput.value.length === 10&&
+            adresInput.value.length > 3
+        ) {
+            window.location.href = "/anasayfa?isim=" + encodeURIComponent(isimSoyisimInput.value);
+        } else {
+            alert("Lütfen gerekli bilgileri doğru bir şekilde giriniz.");
+        }
+        function kontrolleriYap2() {
+            var isimSoyisimInput = document.getElementById("isimSoyisimInput");
+
+            if (isimSoyisimInput.value.length > 0) {
+                // Kullanıcı adını URL parametresi olarak ekleyerek yeni sayfaya yönlendir
+                window.location.href = "/anasayfa?isim=" + encodeURIComponent(isimSoyisimInput.value);
+            } else {
+                alert("Lütfen isim ve soyisim giriniz.");
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var vatandaslikRadio = document.querySelectorAll('input[name="vatandaslik"]');
+    var tcKimlikNumarasiAlani = document.getElementById("tcKimlikNumarasiAlani");
+    var buttonana = document.createElement("button");
+
+    vatandaslikRadio.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            if (this.value === "evet") {
+                tcKimlikNumarasiAlani.style.maxHeight = "200px";
+                buttonana.style.marginLeft = "0px";
+            } else {
+                tcKimlikNumarasiAlani.style.maxHeight = "0";
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

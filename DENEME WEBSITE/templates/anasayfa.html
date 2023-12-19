@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greylag </title>
+    <link rel="stylesheet" href="static/anasayfacsss.css">
+    <link href="https://fonts.cdnfonts.com/css/buffalo-3" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+
+
+
+</head>
+<body class="body">
+    <div class="container">
+        <div class="banner">
+            <div class="greylag">
+                <img src="static/greylag yazi.png" alt="ustkisim4"/>
+        </div>
+            <div class="ustkisim">
+                <img src="static/6.png" alt="ustkisim2"/>
+
+
+        </div>
+        <div class="bannertext">
+            <a href="/hakkimizda">
+                <button class="hakkimizda">
+                Hakkımızda
+                </button>
+            </a>
+            <a href="/iletisim">
+            <button class="iletisim">
+                İletişim
+            </button>
+            </a>
+            <a href="/haberler">
+            <button class="haberler">
+                Haberler
+            </button>
+            </a>
+            <button class="haberler2">
+                 
+            </button>
+        
+        </div>
+        <div class="hitap">
+            <h1>Sayın <span id="isimSoyisim"></span>, hoş geldiniz!</h1>
+        <script>
+                // URL'den parametreleri al
+                var urlParams = new URLSearchParams(window.location.search);
+                var isim = urlParams.get('isim');
+        
+                // Alınan parametreyi sayfada görüntüle
+                if (isim) {
+                    document.getElementById("isimSoyisim").innerText = isim;
+                }
+            </script>
+        </div>
+
+
+
+
+        <div class="container2">
+            <div class="bolgegoruntusu">
+                <a href="/canlibolgegoruntusu" class="image-link" id="bolgegoruntusu-link">
+                    <div class="bolgegoruntusu2">
+                        <img src="static/bolgegoruntusu.png" alt="bolgegoruntusu"/>
+                    </div>
+                    <div class="bolgegoruntusu2kucuk">
+                        <img src="static/goruntukucuk.png" alt="toplanmayerleri"/>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="bildirim">
+                <a href="/acildurumbildirimi" class="image-link" id="bildirim-link">
+                    <div class="bildirim2">
+                        <img src="static/bildirim.png" alt="bildirim"/>
+                    </div>
+                    <div class="bildirim2kucuk">
+                        <img src="static/bildirimkucuk.png" alt="toplanmayerleri"/>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="toplanmayerleri">
+                <a href="/bolgedekitoplanmayerleri" class="image-link" id="toplanmayerleri-link">
+                    <div class="toplanmayerleri2">
+                        <img src="static/toplanmayerleri.png" alt="toplanmayerleri"/>
+                    </div>
+                    <div class="toplanmayerleri2kucuk">
+                        <img src="static/topblogkucuk.png" alt="toplanmayerleri"/>
+                    </div>
+                </a>
+            </div>
+        
+        
+        </div>
+
+
+            <div class="guzelsoz">
+                <div class="guzelsoz2">
+                    <img src="static/4.png" alt="guzelsoz" height="105px"/>
+                    </div>
+
+            </div>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<div class="navigation">
+    <ul>
+        <li class="list active">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="home-outline"></ion-icon>
+                </span>
+                <span class="text"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                </span>
+                <span class="text"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="people-circle-outline"></ion-icon>
+                </span>
+                <span class="text"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                </span>
+                <span class="text"></span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="construct-outline"></ion-icon>
+                </span>
+                <span class="text"></span>
+            </a>
+        </li class="list">
+        <div class="indicator"></div>
+    </ul>
+</div>
+<script>
+const list = document.querySelectorAll(".list");
+
+    function activeLink() {
+        list.forEach((item) =>
+        item.classList.remove("active"));
+        this.classList.add("active");
+    }
+    
+    list.forEach((item) =>
+    item.addEventListener("click", activeLink));</script>
+
+</div>
+</div>
+
+
+</body>
+</html>
