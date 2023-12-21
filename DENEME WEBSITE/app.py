@@ -46,6 +46,10 @@ def deneme22():
 def deneme222():
   return render_template("canlibolgegoruntusu.html")
 
+@app.route('/hakkimizda')
+def deneme223():
+  return render_template("hakkimizda.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
 
